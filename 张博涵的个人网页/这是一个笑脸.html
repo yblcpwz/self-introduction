@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>这是一个笑脸</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="200"></canvas>
+
+  <script>
+    // 获取画布
+    const canvas = document.getElementById('myCanvas');
+    // 获取画笔
+    const context = canvas.getContext('2d');
+
+    // 绘制脸部
+    context.beginPath();
+    // arc(x,y,半径,开始的角度,结束的角度)
+    context.arc(100, 100, 90, 0, Math.PI * 2); // 绘制圆形脸部
+    context.fillStyle = 'yellow';
+    // fill填充
+    context.fill();
+
+    // 绘制左眼
+    context.beginPath();
+    context.arc(70, 80, 15, 0, Math.PI * 2); // 绘制左眼
+    context.fillStyle = 'black';
+    context.fill();
+
+    // 绘制右眼
+    context.beginPath();
+    context.arc(130, 80, 15, 0, Math.PI * 2); // 绘制右眼
+    context.fillStyle = 'black';
+    context.fill();
+
+    // 绘制嘴巴
+    context.beginPath();
+    context.arc(100, 120, 50, 0, Math.PI); // 绘制弧形嘴巴
+    context.lineWidth = 3;
+    context.strokeStyle = 'black';
+    // stroke显示路径
+    context.stroke();
+  </script>
+</body>
+</html>
